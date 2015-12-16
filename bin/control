@@ -11,7 +11,8 @@ function start {
 }
 
 function stop {
-    killall java || true
+ PID=$(cat $OPENSHIFT_REPO_DIR/target/universal/stage/RUNNING_PID)
+ kill -9 $PID || true
 }
 
 function restart {
