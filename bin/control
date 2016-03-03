@@ -32,8 +32,9 @@ function build {
 
     cd ${OPENSHIFT_REPO_DIR}
 	cd dist
-	rm -rf  play-1.0/
-	unzip play-1.0.zip
+	chmod 777 -R .
+	#rm -rf  play-1.0/
+	#unzip play-1.0.zip
 	cd -
     #activator clean stage -Duser.home=${OPENSHIFT_DATA_DIR} -mem 512
 }
