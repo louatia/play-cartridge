@@ -17,8 +17,8 @@ Provides:
   - play2
   - activator
 Scaling:
-  Min: 1
-  Max: -1
+  Min: 3
+  Max: 3
 Cart-Data:
   - Key: OPENSHIFT_PLAY2_LOG_DIR
     Type: environment

@@ -7,6 +7,7 @@ function start {
     cd $OPENSHIFT_REPO_DIR
     # build on first time
     [ -d $OPENSHIFT_REPO_DIR/dist/play-1.0/ ] || build
+	chmod -R 777 $OPENSHIFT_REPO_DIR/dist/play-1.0/
     rm -f $OPENSHIFT_REPO_DIR/dist/play-1.0/RUNNING_PID
     nohup $OPENSHIFT_REPO_DIR/dist/play-1.0/bin/play -Duser.home=${OPENSHIFT_DATA_DIR} -Dhttp.port=8080 -Dhttp.address=${OPENSHIFT_PLAY2_IP} -DapplyEvolutions.default=true -Dconfig.resource=openshift.conf -mem 512 > $OPENSHIFT_PLAY2_LOG_DIR/play.log 2>&1 &
 }
